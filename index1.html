@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Clubs & Events Platform</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f5f6fa; }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background: #111827;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar h2 { font-size: 24px; letter-spacing: 1px; }
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 420px;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1515169067865-5387ec356754') center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 38px;
+      max-width: 700px;
+      line-height: 1.4;
+    }
+
+    /* Section Title */
+    .section-title {
+      font-size: 26px;
+      margin: 40px auto 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Clubs Section */
+    .clubs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+    }
+    .club-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .club-card:hover {
+      transform: translateY(-5px);
+    }
+    .club-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .club-card h3 { margin-bottom: 10px; }
+
+    /* Events Section */
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: 30px auto;
+    }
+    .event-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .event-card:hover { transform: translateY(-5px); }
+    .event-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .event-content { padding: 15px; }
+    .event-content h3 { margin-bottom: 10px; }
+    .event-content p { color: gray; font-size: 14px; }
+    .event-btn {
+      margin-top: 10px;
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .event-btn:hover { background: #1e40af; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>CampusConnect</h2>
+    <div>
+      <a href="#clubs">Clubs</a>
+      <a href="#events">Events</a>
+      <a href="#login">Login</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Explore All College Clubs & Never Miss an Event Again!</h1>
+  </div>
+
+  <!-- Clubs Section -->
+  <h2 class="section-title" id="clubs">Popular Clubs</h2>
+  <div class="clubs-container">
+    <div class="club-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
+      <h3>Ganga Bhumi Club</h3>
+      <p>Followers: 850+</p>
+    </div>
+
+    <div class="club-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" />
+      <h3>Bengali Club</h3>
+      <p>Followers: 670+</p>
+    </div>
+
+    <div class="club-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" />
+      <h3>Metronix</h3>
+      <p>Followers: 920+</p>
+    </div>
+
+    <div class="club-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" />
+      <h3>Photography Club</h3>
+      <p>Followers: 540+</p>
+    </div>
+  </div>
+
+  <!-- Events Section -->
+  <h2 class="section-title" id="events">Upcoming Events</h2>
+  <div class="events-container">
+
+    <div class="event-card">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
+      <div class="event-content">
+        <h3>Photography Workshop</h3>
+        <p>Photography Club • 15 Dec 2025</p>
+        <a class="event-btn" href="#">Register Now</a>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" />
+      <div class="event-content">
+        <h3>Robotics Challenge</h3>
+        <p>Metronix • 18 Dec 2025</p>
+        <a class="event-btn" href="#">Register Now</a>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" />
+      <div class="event-content">
+        <h3>Cultural Fest</h3>
+        <p>Bengali Club • 20 Dec 2025</p>
+        <a class="event-btn" href="#">Register Now</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Added Club List -->
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/mountain.png"/><span>Pahadi Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/anime.png"/><span>Anime Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/india.png"/><span>Telugu Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/linux.png"/><span>Linux Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/android-os.png"/><span>Android Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/flow-chart.png"/><span>Matrix Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/info.png"/><span>FYI Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/news.png"/><span>Feedbox Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/om.png"/><span>Sanskrit Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/maharashtra.png"/><span>Marathi Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/firefox.png"/><span>Mozilla Firefox Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/design.png"/><span>UX Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/cloud.png"/><span>Cloud Zone Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/blockchain.png"/><span>Blockchain Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/physics.png"/><span>Linpack Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/gujarat.png"/><span>Gujarati Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/code.png"/><span>Bit By Bit Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/idea.png"/><span>I Create Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/source-code.png"/><span>Software Development Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/community.png"/><span>Vitera Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/dancing.png"/><span>Dance Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/bacteria.png"/><span>Bioengineering Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/rajasthan.png"/><span>Mharo Rajasthan Club</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/notion.png"/><span>Notion Community</span></div>
+  <div class="club-card"><img src="https://img.icons8.com/ios/100/briefcase.png"/><span>E-Cell Club</span></div>
+</body>
+</html>
